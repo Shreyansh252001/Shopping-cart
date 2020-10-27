@@ -10,6 +10,7 @@ import {
     Container
 } from 'reactstrap';
 
+
 class AppNavbar extends Component {
     state = {
         isOpen: false
@@ -20,6 +21,14 @@ class AppNavbar extends Component {
         })
     }
     render() {
+        const cartDisp = () => {
+            if(this.props.cartItem === 0){
+                return 
+            }else{
+                return <span>{this.props.cartItem}</span>
+            }
+        }
+        console.log(cartDisp)
         return (
             <div>
                 <Navbar color="dark" dark expand="sm" className="mb-5">
@@ -34,6 +43,7 @@ class AppNavbar extends Component {
                                 </NavLink>
                             </NavItem>
                         </Nav>
+                        <i className="fa fa-shopping-cart" aria-hidden="true">{cartDisp()}</i>
                     </Container>
                 </Navbar>
             </div>

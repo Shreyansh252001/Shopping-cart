@@ -1,7 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
-
+const cors = require('cors')
 
 const items = require('./routes/api/item')
 const app = express()
@@ -9,6 +9,7 @@ const app = express()
 //Bodyparser Middleware 
 //Middleware has access to res and req 
 app.use(bodyParser.json())
+app.use(cors())
 
 
 //Anything that has api/items in its url should go 
