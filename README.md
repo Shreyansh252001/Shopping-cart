@@ -1,3 +1,3 @@
-# MERN-STARTER-PACK
-A basic MERN starter pack with GET,POST,DELETE functionality. 
-Defautlt boiler plate was cleared up
+# SHOPPING-CART
+Still at a prototype stage 
+Run npm install to install all the dependencies and read the package.json for the rest
