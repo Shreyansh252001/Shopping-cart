@@ -15,13 +15,21 @@ router.get('/', (req, res) => {
     // res.end("HEllo")
 })
 
+router.get('/:id',(req,res)=>{
+    Item.findById(req.params.id)
+        .then(item => res.json(item))
+        .catch(err => res.status(404).json({ success: false }))
+})
+
+
 // @route POST api/items
 // @desc  Create A Post
 // We use only '/' because   we have already written /api/routes
 //in our server.js file
 router.post('/', (req, res) => {
     const newItem = new Item({
-        name: req.body.name
+        title: req.body.title,
+        price: req.body.price
     });
     newItem.save().then(item => res.json(item));
 })

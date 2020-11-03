@@ -1,11 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+//Components 
+import App from './App';
+import Cart from './components/Cart'
+import Product from './components/Products'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Switch>
+          <Route exact path="/" component={App} />
+          <Route path="/Cart" component={Cart} />
+          <Route path='/Product' component={Product}/>
+      </Switch>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

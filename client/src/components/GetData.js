@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import API from '../config/api'
 
+
+
+ // THis is the admin side of data 
 class GetData extends Component {
     state = { 
         data : []
@@ -22,9 +25,7 @@ class GetData extends Component {
             
         // }catch{
         //     console.log("Error2")   
-
-        
-            try {
+        try {
                 API.get()
                 .then(res => {
                     console.log("Got a response")

@@ -9,6 +9,8 @@ const app = express()
 //Bodyparser Middleware 
 //Middleware has access to res and req 
 app.use(bodyParser.json())
+
+//Cors is so that we can request to the same server from different application
 app.use(cors())
 
 
